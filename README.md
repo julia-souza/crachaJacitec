@@ -6,4 +6,19 @@
 
 Este projeto foi desenvolvido para gerar a credencial de cada inscrito em cursos, palestras ou quaisquer eventos que estarão na JACITEC 2022. 
 
+### Dependências do projeto
+```
+Composer
+```
+```
+PHP ^7.0
+```
+
+### Para executar o projeto, use:
+```
+composer install
+```
+```
+php -S 127.0.0.1:8888
+```
 
