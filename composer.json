@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php": "^7.3",
+        "picqer/php-barcode-generator": "^2.2"
+    }
+}
