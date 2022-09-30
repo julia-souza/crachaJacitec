@@ -1,5 +1,9 @@
 <?php 
 include "vendor/autoload.php";
+use Dompdf\Dompdf;
+
+
+$dompdf = new Dompdf();
 
 // $matricula = "20191si032"; //deixar dinâmico   
 
@@ -28,7 +32,7 @@ for($i = 0; $i < $qtdMatricula; $i++){
     $matriculaAluno = ($matricula[$i]["matricula"]);
     $nomeAluno = ($matricula[$i]["nome"]);
 
-    echo $cracha = '
+    $cracha = '
         <div class="cracha" 
         style="margin: auto;
         display: flex;
@@ -53,5 +57,10 @@ for($i = 0; $i < $qtdMatricula; $i++){
             </div>
         </div>
     ';
+
+    $dompdf->loadHtml($cracha);
+    $dompdf->setPaper('A4');
+    $dompdf->render();
+    $dompdf->stream();
 }
 ?>
