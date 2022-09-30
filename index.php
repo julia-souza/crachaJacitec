@@ -26,6 +26,7 @@ fclose($handle);
 $qtdMatricula = 1;
 for($i = 0; $i < $qtdMatricula; $i++){
     $matriculaAluno = ($matricula[$i]["matricula"]);
+    $nomeAluno = ($matricula[$i]["nome"]);
 
     echo $cracha = '
         <div class="cracha" 
