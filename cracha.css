@@ -7,13 +7,17 @@
   }
 
   .cracha {
+
       background-color: #fff;
       display: block;
       margin: auto;
       border: 1px solid green;
       border-radius: 10px;
       width: 450px;
-      height: 450px;
+      /* height: 450px; */
+      height: max-content;
+      margin-top: 70px;
+      padding: 10px;
 
   }
 
@@ -33,25 +37,27 @@
   }
 
   @media only screen and (max-width: 580px) {
-    .cracha{
-        padding: 8px;
-        margin-top: 20px;
-        /* margin: auto; */
-        width: min-content;
-        height: max-content;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .crachaH{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        align-content: center;
-    }
-    .crachaH > img{
-        width: 60%;
-    }
-   
+      .cracha {
+          padding: 8px;
+          /* margin-top: 20px; */
+          /* margin: auto; */
+          width: min-content;
+          height: max-content;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .crachaH {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          align-content: center;
+      }
+
+      .crachaH>img {
+          width: 60%;
+      }
+
   }
