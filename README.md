@@ -18,7 +18,8 @@ PHP ^7.0
 ```
 composer install
 ```
+Em um terminal execute:
 ```
 php -S 127.0.0.1:8888
 ```
-
+Abra no navegador a seguinte URL: ```127.0.0.1:8888/qrcode.php``` para gerar os arquivos 
