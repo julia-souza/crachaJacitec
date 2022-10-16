@@ -31,7 +31,7 @@
 
     fclose($handle);
     
-    $qtdMatricula =1;
+    $qtdMatricula = 1;
     // 
     for($i = 0; $i < $qtdMatricula; $i++){
         $matriculaAluno = ($matricula[$i]["matricula"]);

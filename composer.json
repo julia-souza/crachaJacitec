@@ -1,8 +1,15 @@
 {
-    "require": {
-        "php": "^7.3",
-        "picqer/php-barcode-generator": "^2.2",
-        "dompdf/dompdf": "^2.0",
-        "chillerlan/php-qrcode": "^4.3"
-    }
+  "require": {
+    "php": "^7.3",
+    "picqer/php-barcode-generator": "^2.2",
+    "dompdf/dompdf": "^2.0",
+    "chillerlan/php-qrcode": "^4.3",
+    "mpdf/mpdf": "^8.1"
+  },
+  "scripts": {
+    "start": [
+      "Composer\\Config::disableProcessTimeout",
+      "php -S 127.0.0.1:8888"
+    ]
+  }
 }
