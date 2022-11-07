@@ -6,6 +6,8 @@ include "vendor/autoload.php";
 use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\QROptions;
 
+ini_set("pcre.backtrack_limit", "50000000");
+
 $mpdf = new \Mpdf\Mpdf();
 
 $stylesheet = file_get_contents('./pdf.css');
@@ -17,10 +19,10 @@ $mpdf->WriteHTML($stylesheet,\Mpdf\HTMLParserMode::HEADER_CSS);
 $img = "img/banner-jacitec-22.png";
 $imgEnconded = base64_encode($img);
 
-$data = "data.csv";
+$data = "data02.csv";
 
 $handle = fopen($data, "r");
-$header = fgetcsv($handle, 10000000, ",");
+$header = fgetcsv($handle, ",");
 
 $qtdMatricula = 0;
 
