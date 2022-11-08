@@ -3,6 +3,8 @@
 
 include "vendor/autoload.php";
 
+header('Content-Type: text/html; charset=utf-8');
+
 use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\QROptions;
 
@@ -38,7 +40,6 @@ $body;
 for ($i = 0; $i < $qtdMatricula; $i++) {
     $matriculaAluno = ($matricula[$i]["matricula"]);
     $nomeAluno = ($matricula[$i]["nome"]);
-
     $identificacao = '
                     <div class="base">
                         <img class="banner" src="img/banner-jacitec-22.png"/>
@@ -46,13 +47,12 @@ for ($i = 0; $i < $qtdMatricula; $i++) {
                         <div class="qrcd">
                             <img class="qrc" id="qrcode" src="' . (new QRCode)->render($matriculaAluno) . '"/>
                         </div>
-                        <h2> ' . $matriculaAluno . ' </h2>
                     </div>
                 ';
 
                 $body .= $identificacao;
 
-    // $mpdf->WriteHTML($identificacao);
+    $mpdf->WriteHTML($identificacao);
 }
 $mpdf->WriteHTML($body);
 $mpdf->Output();

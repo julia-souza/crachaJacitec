@@ -24,32 +24,29 @@
 
     $qtdMatricula = 0;
 
-    while ($row = fgetcsv($handle, 1000, ",")) {
-        $matricula[] = array_combine($header, $row);
-        $qtdMatricula ++;
-    }
+    // while ($row = fgetcsv($handle, 1000, ",")) {
+    //     $matricula[] = array_combine($header, $row);
+    //     $qtdMatricula ++;
+    // }
 
-    fclose($handle);
-    
-    $qtdMatricula = 1;
-    // 
-    for($i = 0; $i < $qtdMatricula; $i++){
-        $matriculaAluno = ($matricula[$i]["matricula"]);
-        $nomeAluno = ($matricula[$i]["nome"]);
+    // fclose($handle);
+    // $link = 'https://www.linkedin.com/in/julia-de-souza-borges/';
+    // $qtdMatricula = 1;
+    // for($i = 0; $i < $qtdMatricula; $i++){
+    //     $matriculaAluno = ($matricula[$i]["matricula"]);
+    //     $nomeAluno = ($matricula[$i]["nome"]);
         echo $identificacao = '<div class="base">
                 <img class="banner" src="img/banner-jacitec-22.png"/>
                 <h1> ' . $nomeAluno . ' </h1>
-                <img id="qrcode" src="'.(new QRCode)->render($matriculaAluno).'"/>
+                <img id="qrcode" src="'.(new QRCode)->render($link).'"/>
                 <h2> ' . $matriculaAluno . ' </h2>
                 </div>';
+    // }
         
-        
-        // $dompdf->load_html($identificacao, $encoding=null);           
-        // $dompdf->set_paper("A4", "portrail");
-        // $dompdf->render();
-        // $dompdf->stream("identificacao.pdf");
-    }
-    
-    
-      
+    //     $dompdf->load_html($identificacao, $encoding=null);           
+    //     $dompdf->set_paper("A4", "portrail");
+    //     $dompdf->render();
+    //     $dompdf->stream("identificacao.pdf");
+    // }
+   
 ?>

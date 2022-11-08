@@ -3,6 +3,9 @@
 
 include "vendor/autoload.php";
 
+
+header('Content-Type: text/html; charset=utf-8');
+
 use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\QROptions;
 
