@@ -49,7 +49,6 @@ for ($i = 0; $i < $qtdMatricula; $i++) {
                         <div class="qrcd">
                             <img class="qrc" id="qrcode" src="' . (new QRCode)->render($matriculaAluno) . '"/>
                         </div>
-                        <h2> ' . $matriculaAluno . ' </h2>
                     </div>
                 ';
 
